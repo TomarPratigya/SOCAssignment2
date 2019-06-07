@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#Input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style type="text/css">
+#myTable {
+width: 100%;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+	Name<input type="text" id="Input" ><br>
+	<table border="1" id="myTable">
+		<tr>
+			<th>Roll No</th>
+	<tbody id="myTable">
+		<tr>
+			<td>170003</td>
+			<td>Aakarsh Singh</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170011</td>
+			<td>Akash Tomar</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170101</td>
+			<td>Dikshant Sachan</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170203</td>
+			<td>Hirday Singh</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170303</td>
+			<td>Meena Rana</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>180347</td>
+			<td>Mishti Singh</td>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<td>170478</td>
+			<td>Pragyan Pandey</td>
+			<td>2017</td>
+		</tr>
+        <tr>
+			<td>170499</td>
+			<td>Pratigya Tomar</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170510</td>
+			<td>Priyal Bhandari</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170582</td>
+			<td>Ritika Ajmera</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>180602</td>
+			<td>Sachi Srivastava</td>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<td>170683</td>
+			<td>Saumya Srivastava</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>170823</td>
+			<td>Yash Maheshwari</td>
+			<td>2017</td>
+		</tr>
+		<tr>
+			<td>180827</td>
+			<td>Yashparna De</td>
+			<td>2018</td>
+		</tr>
+	</tbody>
+    </table>
+
+</body>
+</html>
